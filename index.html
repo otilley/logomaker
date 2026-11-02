@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo maker</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            
+            <h1>logo maker</h1>
+        </div>
+        
+    </header>
+    <main>
+        <section class="controls" aria-label="Logo settings">
+            <label class="control" for="line-count">
+                <span class="control-heading">number of lines <output id="line-count-value">28</output></span>
+                <input id="line-count" type="range" min="4" max="64" value="28">
+            </label>
+            <label class="control" for="curve-steepness">
+                <span class="control-heading">curve <output id="curve-value">55%</output></span>
+                <input id="curve-steepness" type="range" min="0" max="100" value="55">
+            </label>
+            <label class="control" for="stroke-width">
+                <span class="control-heading">stroke width <output id="stroke-value">1.7</output></span>
+                <input id="stroke-width" type="range" min="0.5" max="6" step="0.1" value="1.7">
+            </label>
+            <div class="control gradient-control">
+                <span class="control-heading">gradient</span>
+                <label class="color-input" for="gradient-start">start <input id="gradient-start" type="color" value="#d36c4a"></label>
+                <label class="color-input" for="gradient-end">end <input id="gradient-end" type="color" value="#405b82"></label>
+            </div>
+        </section>
+        <div id="canvas-container" aria-label="Logo preview"></div>
+    </main>
+    <script src="sketch.js"></script>
+</body>
+</html>
